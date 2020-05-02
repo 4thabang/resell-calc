@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Resell Calculator</title>
+    <meta charset="UTF-8" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+  </head>
+
+  <body style="background-color: #FAFAFA;">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <!-- Heading & Explanation -->
+    <div class="container hande">
+      <div class="col">
+        <div class="header-1 text-center">
+          <h3 class>Reseller Fee Calculator</h3>
+        </div>
+        <div>
+          <p class="text-center">
+            Calculate how much you will save by using Fordabl as opposed to your
+            current reselling platform.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- End of H & E -->
+    <!-- Resell Calculator Form -->
+    <div class="container form">
+      <div class="col">
+        <div class="calc-head">
+          <h6>ENTER SOLD AMOUNT</h6>
+        </div>
+        <div class="calc-form">
+          <form>
+            <div class="form-group">
+              <input
+                type="number"
+                class="form-control"
+                id="form"
+                placeholder="e.g. 500"
+                required
+              />
+              <p id="error"></p>
+            </div>
+            <div class="form-group">
+              <div class="calc-head">
+                <h6>SELECT RESELL PLATFORM</h6>
+              </div>
+              <select class="form-control" id="formselect" required>
+                <option disabled selected value="0"
+                  >-- Select a Platform --</option
+                >
+                <option value="0.125" id="stockx">StockX</option>
+                <option value="0.124" id="goat">GOAT</option>
+                <option value="0.15" id="klekt">KLEKT</option>
+                <option value="0.1290" id="ebay">eBay</option>
+                <option value="0.129" id="depop">Depop</option>
+              </select>
+            </div>
+            <button class="btn btn-primary" id="button" type="button">
+              Calculate Fees
+            </button>
+            <p id="success"></p>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- End of Resell Calculator Form -->
+    <!-- Fees Calculator Values -->
+    <div class="container results">
+      <div class="col">
+        <div class="row">
+          <div class="col-sm">
+            <div class="other fees">
+              <div>
+                <h6 id="otherselect">PICK A PLATFORM</h6>
+              </div>
+              <div id="otherfees"></div>
+            </div>
+          </div>
+
+          <div class="col-sm">
+            <div class="fordabl fees">
+              <div>
+                <h6 id="fordablselect">FORDABL FEES</h6>
+              </div>
+              <div id="fordablfees"></div>
+            </div>
+          </div>
+
+          <div class="col-sm">
+            <div class="saved fees">
+              <div>
+                <h6 id="savedselect">SAVED FEES</h6>
+              </div>
+              <div id="savedfees"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End of Fees Value -->
+
+    <!---->
+    <div class="container">
+      <div class="card text-center">
+        <div class="card-header">
+          <ul
+            class="nav nav-pills justify-content-center mb-3"
+            id="pills-tab"
+            role="tablist"
+          >
+            <li class="nav-item">
+              <a
+                class="nav-link offer active"
+                id="pills-home-tab"
+                data-toggle="pill"
+                href="#pills-home"
+                role="tab"
+                aria-controls="pills-home"
+                aria-selected="true"
+                >What We Offer</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link requirements"
+                id="pills-profile-tab"
+                data-toggle="pill"
+                href="#pills-profile"
+                role="tab"
+                aria-controls="pills-profile"
+                aria-selected="false"
+                >Requirements</a
+              >
+            </li>
+          </ul>
+          <div class="tab-content" id="pills-tabContent">
+            <div
+              class="tab-pane fade show active"
+              id="pills-home"
+              role="tabpanel"
+              aria-labelledby="pills-home-tab"
+            >
+              <div class="card-body" id="tooffer">
+                <h5 class="card-title">So, what do we offer?</h5>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">
+                    💻 All-in-One Finance & Order Management Dashboard
+                  </li>
+                  <li class="list-group-item">
+                    🔐 Guarantee & Protection up to £10,000
+                  </li>
+                  <li class="list-group-item">
+                    📊 No Monthly Cost (FREE)
+                  </li>
+                  <li class="list-group-item">
+                    🚴‍♂️ On-demand Delivery & Pick-up (~1hr)
+                  </li>
+                  <li class="list-group-item">👨‍💻 More Features Soon...</li>
+                </ul>
+                <a href="#" class="btn btn-primary">Become a Reseller</a>
+              </div>
+            </div>
+            <div
+              class="tab-pane fade"
+              id="pills-profile"
+              role="tabpanel"
+              aria-labelledby="pills-profile-tab"
+            >
+              <div class="card-body" id="require">
+                <h5 class="card-title">The requirements</h5>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">⭐️ 100+ Authentic Reviews</li>
+                  <li class="list-group-item">👟 50+ Sneaker Inventory</li>
+                  <li class="list-group-item">
+                    👨‍💻 Ability to Be at Home/In-store for Pick-ups
+                  </li>
+                  <li class="list-group-item">
+                    📆 1-2 Years of Resell Experience
+                  </li>
+                  <li class="list-group-item">
+                    🕵️‍♂️ Pass Our 'Authentic Sneakers' Inspection
+                  </li>
+                </ul>
+                <a href="#" class="btn btn-primary">Become a Reseller</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!---->
+
+    <div class="container requirements" id="requirements">
+      <div class="col"></div>
+    </div>
+    <script type="text/javascript" src="index.js"></script>
+  </body>
+  <!-- Dropdown Select -->
+  <!-- End of Dropdown Select -->
+</html>
