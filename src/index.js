@@ -4,7 +4,7 @@ import "./styles.css";
 var error = document.getElementById("error");
 var success = document.getElementById("success");
 const errMess = "This field is required 🥺";
-const succMess = "Calculating Savings... 🎉";
+const succMess = "Calculated Savings 🎉";
 
 // Hide when not used
 error.style.display = "none";
