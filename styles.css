@@ -1,0 +1,103 @@
+body {
+    font-family: "Montserrat", sans-serif;
+  }
+  
+  .container.hande {
+    margin-top: 20px;
+    box-shadow: none !important;
+    background-color: transparent;
+  }
+  
+  .container.form {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1) !important;
+    border-radius: 10px;
+    background-color: #fff;
+    margin-top: 20px;
+  }
+  
+  .btn {
+    background-color: #ff9a44 !important;
+    border: 0 !important;
+  }
+  
+  .container.results {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1) !important;
+    border-radius: 10px;
+    background-color: #fff;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  
+  #otherfees {
+    color: #ff9a44;
+    font-size: 20px;
+    font-weight: 600;
+  }
+  
+  #fordablfees {
+    color: #ff9a44;
+    font-size: 20px;
+    font-weight: 600;
+  }
+  
+  #savedfees {
+    color: #ff9a44;
+    font-size: 20px;
+    font-weight: 600;
+  }
+  
+  #error {
+    color: #ff9a44;
+    font-size: 14px;
+    padding-top: 10px;
+  }
+  
+  #success {
+    color: #ff9a44;
+    font-size: 14px;
+    padding-top: 10px;
+  }
+  
+  .nav-link.offer.active {
+    background-color: #ff9a44 !important;
+    color: white !important;
+  }
+  
+  .nav-link.offer {
+    color: #ff9a44 !important;
+  }
+  
+  .nav-link.requirements {
+    color: #ff9a44;
+  }
+  
+  .nav-link.requirements.active {
+    background-color: #ff9a44 !important;
+    color: white !important;
+  }
+  
+  .card-header {
+    background-color: #fff !important;
+    border: none !important;
+  }
+  
+  .card {
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1) !important;
+    border-radius: 10px !important;
+    background-color: #fff;
+    border: none !important;
+    margin-bottom: 20px;
+  }
+  
+  .card-header {
+    border-radius: 10px !important;
+  }
+  
+  .list-group {
+    padding-bottom: 20px;
+  }
+  
